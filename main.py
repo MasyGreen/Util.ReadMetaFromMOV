@@ -53,10 +53,10 @@ def main():
             if file.lower().endswith('.mov'):
                 v1, v2 = get_mov_timestamps(os.path.join(root, file))
                 old_file_name = os.path.join(root, file) # old file name
-                new_file_name = os.path.join(root, f"{v1.strftime('%Y%m%d')} {file.strip()}") # new file name
+                new_file_name = os.path.join(root, f"{v1.strftime('%Y%m%d%H%M')} {file.strip()}") # new file name
                 print(f"{old_file_name} => {new_file_name}")
                 os.rename(old_file_name, new_file_name)
 
 if __name__ == '__main__':
-    move_folder = os.getcwd()
+    move_folder = "d:\\PhotoPhone\\ExVideoCopy\\"#os.getcwd()
     main()
